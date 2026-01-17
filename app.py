@@ -10,14 +10,10 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 # ================= LOAD MODELS =================
-diabetes_model = pickle.load(open(
-    'C:/Users/Acer/Desktop/Multiple Disease Prediction System/saved models/diabetes_model.sav', 'rb'))
+diabetes_model = pickle.load(open("saved_models/diabetes_model.sav", "rb"))
+heart_disease_model = pickle.load(open("saved_models/heart_disease_model.sav", "rb"))
+parkinsons_model = pickle.load(open("saved_models/parkinsons_model.sav", "rb"))
 
-heart_disease_model = pickle.load(open(
-    'C:/Users/Acer/Desktop/Multiple Disease Prediction System/saved models/heart_disease_model.sav', 'rb'))
-
-parkinsons_model = pickle.load(open(
-    'C:/Users/Acer/Desktop/Multiple Disease Prediction System/saved models/parkinsons_model.sav', 'rb'))
 
 # ================= SIDEBAR =================
 with st.sidebar:
@@ -160,3 +156,4 @@ elif selected == 'Parkinsons Prediction':
 
         except:
             st.error(' Please enter valid numeric values')
+
