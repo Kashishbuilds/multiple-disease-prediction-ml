@@ -4,3 +4,4 @@ pandas
 scikit-learn
 altair
 pickle-mixin
+streamlit-option-menu
